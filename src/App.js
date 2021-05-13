@@ -36,7 +36,7 @@ const App = () => (
     </div>
   </nav>
 
-  <div className="container mt-3">
+  <div className="mt-3">
     <Switch>
     <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
