@@ -16,8 +16,6 @@ import AddArticle from "./pages/AddArticle";
 import Article from "./pages/Article";
 import ArticlesList from "./pages/ArticlesList";
 
-import Home from './pages/Home'
-
 const App = () => (
   <Router>
   <nav className="navbar navbar-expand navbar-dark bg-dark">
