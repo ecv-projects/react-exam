@@ -19,13 +19,6 @@ class LastThree extends Component {
     this.props.retrieveArticles();
   }
 
-  refreshData() {
-    this.setState({
-      currentArticle: null,
-      currentIndex: -1,
-    });
-  }
-
   render() {
     const { currentIndex } = this.state;
     const { articles } = this.props;
@@ -41,19 +34,11 @@ class LastThree extends Component {
               lastThree.map((article, index) => (
                 <li
                   className={
-                    "list-group-item " +
-                    (index === currentIndex ? "active" : "")
+                    "list-group-item "
                   }
-                  onClick={() => this.setActiveArticle(article, index)}
                   key={index}
                 >
-                  <h4>Article</h4>
-                  <div>
-                    <label>
-                      <strong>Name:</strong>
-                    </label>{" "}
-                    {article.name}
-                  </div>
+                  <h4>{article.name}</h4>
                   <div class="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
                   </div>
                   <div>
