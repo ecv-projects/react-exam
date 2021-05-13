@@ -1,0 +1,15 @@
+.register {
+    margin-top: 40px;
+}
+
+.register input {
+    margin-bottom: 20px;
+}
+
+.register label {
+    margin-bottom: 10px;
+}
+
+.register form {
+    margin: 40px 0;
+}

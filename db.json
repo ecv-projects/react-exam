@@ -5,6 +5,7 @@
       "password": "$2a$10$ChfLx1/ULj4hz4U7ywaNCOHLw.GjpDCyHRmLtD34bAEOrpc2Zi3IO",
       "firstname": "Léa",
       "lastname": "Dubois",
+      "age": "30",
       "image": "https://via.placeholder.com/250",
       "role": "admin",
       "id": 1
@@ -14,6 +15,7 @@
       "password": "$2a$10$RJOPJW4iFNZ195atMh5yr.dpko3hSAzmLgTyZ9kbcESj6ZGyf7MEq",
       "firstname": "Léa",
       "lastname": "Dubois",
+      "age": 24,
       "image": "https://via.placeholder.com/250",
       "role": "admin",
       "id": 2
@@ -23,6 +25,7 @@
       "password": "$2a$10$ASrYm1P4zzKvu3qBsoPpLuDhueU7zl.50w80ISLDwvVmRPnJ9qp3S",
       "firstname": "Léa",
       "lastname": "Dubois",
+      "age": 24,
       "image": "https://via.placeholder.com/250",
       "role": "admin",
       "id": 3

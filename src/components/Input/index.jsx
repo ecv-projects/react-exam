@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 
 const Input = ({ type, label, name, placeholder, step, minlength, maxlength, required, handleChange, value, error }) => (
-  <div className="flex flex-col mt-10">
+  <div className="form-group">
     <label htmlFor={name}>{label}</label>
     <input
-    className="border p-1"
+    className="form-control"
       type={type}
       name={name}
       id={name}

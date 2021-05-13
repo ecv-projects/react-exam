@@ -1,0 +1,15 @@
+.login {
+    margin-top: 40px;
+}
+
+.login input {
+    margin-bottom: 20px;
+}
+
+.login label {
+    margin-bottom: 10px;
+}
+
+.login form {
+    margin: 40px 0;
+}
