@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import React  from 'react';
 
 const Input = ({ type, label, name, placeholder, step, minlength, maxlength, required, handleChange, value, error }) => (
   <div className="form-group">

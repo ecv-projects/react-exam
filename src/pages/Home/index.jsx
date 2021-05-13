@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import LastThree from "../LastThree"
+import React  from 'react';
 
 const Home = () => (
   <div className="w-full h-screen flex justify-center items-center">

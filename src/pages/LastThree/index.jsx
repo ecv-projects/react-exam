@@ -20,7 +20,6 @@ class LastThree extends Component {
   }
 
   render() {
-    const { currentIndex } = this.state;
     const { articles } = this.props;
     const lastThree = articles.slice(Math.max(articles.length - 3, 0));
 
@@ -39,7 +38,7 @@ class LastThree extends Component {
                   key={index}
                 >
                   <h4>{article.name}</h4>
-                  <div class="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
+                  <div className="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
                   </div>
                   <div>
                   </div>

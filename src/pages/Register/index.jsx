@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { register } from "../../store/users";
+import React from 'react';
 
 import Input from "../../components/Input";
 import './style.css';

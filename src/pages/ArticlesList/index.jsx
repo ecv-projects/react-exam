@@ -65,7 +65,7 @@ class ArticlesList extends Component {
                     </label>{" "}
                     {article.name}
                   </div>
-                  <div class="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
+                  <div className="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
                   </div>
                   <div>
                     <label>
@@ -102,7 +102,7 @@ class ArticlesList extends Component {
                 </label>{" "}
                 {currentArticle.name}
               </div>
-              <div class="product-image" style={{backgroundImage: "url(" + currentArticle.image + ")"}}>
+              <div className="product-image" style={{backgroundImage: "url(" + currentArticle.image + ")"}}>
               </div>
               <div>
                 <label>

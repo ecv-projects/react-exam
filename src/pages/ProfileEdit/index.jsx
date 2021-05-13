@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { editProfile, getUser } from "../../store/users";
+import React  from 'react';
 
 import Input from "../../components/Input";
 import "./style.css";

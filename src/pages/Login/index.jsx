@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { login } from "../../store/users";
 import jwt from "jsonwebtoken";
+import React from 'react';
 
 import Input from "../../components/Input";
 import './style.css';

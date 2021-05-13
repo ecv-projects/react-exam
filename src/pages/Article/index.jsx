@@ -134,7 +134,7 @@ class Article extends Component {
                   className="form-control"
                   id="name"
                   value={currentArticle.name}
-                  onChange={this.onChangename}
+                  onChange={this.onChangeName}
                 />
               </div>
               <div className="form-group">
