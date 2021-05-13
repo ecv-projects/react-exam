@@ -19,9 +19,9 @@ const Profile = () => {
       };
       dispatch(fetchUser(datas));
     } else {
-      history.push("/");
+      history.push("/login");
     }
-  });
+  }, []);
 
   function logout(e) {
     e.preventDefault();
@@ -36,7 +36,10 @@ const Profile = () => {
         <button className="btn btn-danger" onClick={logout}>
           Se déconnecter
         </button>
-        <button className="btn btn-primary" onClick={() => history.push("/profile-edit")}>
+        <button
+          className="btn btn-primary"
+          onClick={() => history.push("/profile-edit")}
+        >
           Editer son profil
         </button>
       </div>

@@ -64,6 +64,7 @@ export const login = (user) => async (dispatch) => {
 };
 
 export const fetchUser = (datas) => async (dispatch) => {
+  console.log(datas);
   try {
     const response = await fetch(
       `http://localhost:3001/600/users/${datas.sub}`,
@@ -86,17 +87,16 @@ export const editProfile = (datas) => async (dispatch) => {
     const response = await fetch(
       `http://localhost:3001/600/users/${datas.id}`,
       {
-        method: "PATCH",
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("access_token").token}`,
+          "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
         },
-        body: JSON.stringify({ ...datas }),
+        body: JSON.stringify(datas),
       }
     );
     const data = await response.json();
     dispatch(updateUser(data));
-    console.log(data);
   } catch (e) {
     console.error(e);
   }

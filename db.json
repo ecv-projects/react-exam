@@ -1,13 +1,13 @@
 {
   "users": [
     {
-      "email": "lea@gmail.com",
-      "password": "$2a$10$ChfLx1/ULj4hz4U7ywaNCOHLw.GjpDCyHRmLtD34bAEOrpc2Zi3IO",
-      "firstname": "Léa",
+      "firstname": "Léa upp",
       "lastname": "Dubois",
-      "age": "30",
+      "age": "39",
       "image": "https://via.placeholder.com/250",
       "role": "admin",
+      "password": "$2a$10$ChfLx1/ULj4hz4U7ywaNCOHLw.GjpDCyHRmLtD34bAEOrpc2Zi3IO",
+      "email": "lea@gmail.com",
       "id": 1
     },
     {
