@@ -1,19 +1,26 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { login } from "../../store/users";
 import jwt from "jsonwebtoken";
 
 import Input from "../../components/Input";
+import './style.css';
 
 const Login = () => {
   const dispatch = useDispatch();
   let history = useHistory();
 
+  useEffect(() => {
+    if (localStorage.getItem("access_token")) {
+      history.push("/profile");
+    }
+  });
+
   const [fields, setFields] = useState({
-    email: "",
-    password: "",
+    email: "lea@gmail.com",
+    password: "azertyuiop",
   });
 
   const handleChangeField = ({ target: { value, name } }) =>
@@ -43,29 +50,37 @@ const Login = () => {
 
   return (
     <>
-      <h1>Connexion</h1>
-      <form className="m-10" onSubmit={submitForm}>
-        <Input
-          label="Email"
-          name="email"
-          handleChange={handleChangeField}
-          value={fields.text}
-        />
+      <div className="container login">
+        <div className="row justify-content-center">
+        <div className="col-12 col-md-8">
+        <h1>Connexion</h1>
+        <form className="card" onSubmit={submitForm}>
+          <div className="form-group card-body">
+            <Input
+              label="Email"
+              name="email"
+              handleChange={handleChangeField}
+              value={fields.email}
+            />
 
-        <Input
-          label="Mot de passe"
-          name="password"
-          type="paswword"
-          handleChange={handleChangeField}
-          value={fields.password}
-        />
-        <button type="submit" className="py-3 px-5 border mt-10">
-          Se connecter
-        </button>
-      </form>
-      <Link className="block" to="/register">
-        Pas encore de compte ?
-      </Link>
+            <Input
+              label="Mot de passe"
+              name="password"
+              type="password"
+              handleChange={handleChangeField}
+              value={fields.password}
+            />
+            <button type="submit" className="btn btn-primary">
+              Se connecter
+            </button>
+          </div>
+        </form>
+        <Link className="block" to="/register">
+          Pas encore de compte ?
+        </Link>
+        </div>
+        </div>
+      </div>
     </>
   );
 };

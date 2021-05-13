@@ -15,6 +15,7 @@ import Profile from "./pages/Profile";
 import AddArticle from "./pages/AddArticle";
 import Article from "./pages/Article";
 import ArticlesList from "./pages/ArticlesList";
+import ProfileEdit from "./pages/ProfileEdit";
 
 const App = () => (
   <Router>
@@ -45,6 +46,8 @@ const App = () => (
       <Route exact path={["/articles"]} component={ArticlesList} />
       <Route exact path="/add" component={AddArticle} />
       <Route path="/articles/:id" component={Article} />
+      <Route path="/profile-edit" component={ProfileEdit} />
+      <Route path="/" component={Home} />
     </Switch>
   </div>
 </Router>

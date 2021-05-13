@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Button = ({ handleClick, text, type }) => (
-  <button type={type} className="py-2 px-5 my-1 text-white bg-gray-400 shadow-sm rounded" onClick={() => handleClick(text)}>{text}</button>
+  <button type={type} onClick={() => handleClick(text)}>{text}</button>
 )
 
 Button.propTypes = {

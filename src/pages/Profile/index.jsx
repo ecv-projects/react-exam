@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { fetchUser, getUser } from "../../store/users";
 
+import "./style.css";
+
 const Profile = () => {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -17,9 +19,9 @@ const Profile = () => {
       };
       dispatch(fetchUser(datas));
     } else {
-      history.push("/");
+      history.push("/login");
     }
-  });
+  }, []);
 
   function logout(e) {
     e.preventDefault();
@@ -28,13 +30,41 @@ const Profile = () => {
   }
 
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <div className="flex flex-col items-center">
-        <h1>Profile</h1>
-        <p>{user.firstname}</p>
-        <p>{user.lastname}</p>
+    <div className="container profile">
+      <h1>Profile</h1>
+      <div className="profile-actions">
+        <button className="btn btn-danger" onClick={logout}>
+          Se déconnecter
+        </button>
+        <button
+          className="btn btn-primary"
+          onClick={() => history.push("/profile-edit")}
+        >
+          Editer son profil
+        </button>
       </div>
-      <button onClick={logout}>Logout</button>
+
+      <div className="profile-content container-fluid">
+        <div className="row">
+          <div className="col-6">
+            <img src={user.image} alt="" />
+          </div>
+          <div className="col-6">
+            <h3>
+              {user.firstname} {user.lastname}
+            </h3>
+            <p>
+              <b>Email</b> : {user.email}
+            </p>
+            <p>
+              <b>Rôle</b> : {user.role}
+            </p>
+            <p>
+              <b>Age</b> : {user.age}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
