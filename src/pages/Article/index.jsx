@@ -187,8 +187,6 @@ class Article extends Component {
           </div>
         ) : (
           <div>
-            <br />
-            <p>Please click on a article...</p>
           </div>
         )}
       </div>

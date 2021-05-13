@@ -6,60 +6,22 @@ import {
 } from "../../actions/articles";
 import { Link } from "react-router-dom";
 
-//import Pagination from "@material-ui/lab/Pagination";
-
 class ArticlesList extends Component {
   constructor(props) {
     super(props);
-    this.onChangeSearchName = this.onChangeSearchName.bind(this);
     this.refreshData = this.refreshData.bind(this);
     this.setActiveArticle = this.setActiveArticle.bind(this);
-    this.handlePageChange = this.handlePageChange.bind(this);
-    this.handlePageSizeChange = this.handlePageSizeChange.bind(this);
 
     this.state = {
       articles: [],
       currentArticle: null,
-      currentIndex: -1,
-      searchName: "",
-
-      page: 1,
-      count: 0,
-      pageSize: 3,
+      currentIndex: -1
     };
 
-    this.pageSizes = [3, 6, 9];
   }
 
   componentDidMount() {
     this.props.retrieveArticles();
-  }
-
-  onChangeSearchName(e) {
-    const searchName = e.target.value;
-
-    this.setState({
-        searchName: searchName,
-    });
-  }
-
-
-  getRequestParams(searchName, page, pageSize) {
-    let params = {};
-
-    if (searchName) {
-      params["name"] = searchName;
-    }
-
-    if (page) {
-      params["page"] = page - 1;
-    }
-
-    if (pageSize) {
-      params["size"] = pageSize;
-    }
-
-    return params;
   }
 
   refreshData() {
@@ -76,50 +38,14 @@ class ArticlesList extends Component {
     });
   }
 
-  removeAllArticles() {
-    this.props
-      .deleteAllArticles()
-      .then((response) => {
-        console.log(response);
-        this.refreshData();
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }
-
-  handlePageChange(event, value) {
-    this.setState(
-      {
-        page: value,
-      },
-      () => {
-        this.retrieveArticles();
-      }
-    );
-  }
-
-  handlePageSizeChange(event) {
-    this.setState(
-      {
-        pageSize: event.target.value,
-        page: 1
-      },
-      () => {
-        this.retrieveArticles();
-      }
-    );
-  }
-
   render() {
     const { currentArticle, currentIndex } = this.state;
     const { articles } = this.props;
 
     return (
-      <div className="list row">
-        <div className="col-md-6">
+      <div>
+        <div>
           <h4>Articles List</h4>
-
           <ul className="list-group">
             {articles &&
               articles.map((article, index) => (
@@ -131,8 +57,37 @@ class ArticlesList extends Component {
                   onClick={() => this.setActiveArticle(article, index)}
                   key={index}
                 >
-                  {article.name}
-                </li>
+                  <h4>Article</h4>
+                  <div>
+                    <label>
+                      <strong>Name:</strong>
+                    </label>{" "}
+                    {article.name}
+                  </div>
+                  <div class="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
+                  </div>
+                  <div>
+                    <label>
+                      <strong>Description:</strong>
+                    </label>{" "}
+                    {article.description}
+                  </div>
+                  <div>
+                    <label>
+                      <strong>Price:</strong>
+                    </label>{" "}
+                    {article.price} € 
+                  </div>
+
+                    <Link
+                      to={"/articles/" + article.id}
+                      className="btn btn-warning"
+                    >
+                      Edit
+                    </Link>
+                  <div>
+                </div>
+              </li>
               ))}
           </ul>
         </div>
@@ -160,11 +115,8 @@ class ArticlesList extends Component {
                 </label>{" "}
                 {currentArticle.price} € 
               </div>
+              
               <div>
-                <label>
-                  <strong>Status:</strong>
-                </label>{" "}
-                {currentArticle.published ? "Published" : "Pending"}
               </div>
 
               <Link
@@ -176,8 +128,6 @@ class ArticlesList extends Component {
             </div>
           ) : (
             <div>
-              <br />
-              <p>Please click on an article...</p>
             </div>
           )}
         </div>

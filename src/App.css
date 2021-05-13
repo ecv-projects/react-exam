@@ -21,3 +21,12 @@
 .btn {
   color: #000000;
 }
+
+.list-group {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.list-group-item  {
+  width: 33%;
+}
