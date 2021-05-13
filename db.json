@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "firstname": "Juliette",
+      "lastname": "Connan",
+      "image": "https://via.placeholder.com/250",
+      "role": "admin",
+      "email": "juliette@gmail.com",
+      "creationDate": "",
+      "id": 1
+    }
+  ],
+  "articles": [
+    {
+      "name": "Chaussures",
+      "image": "https://via.placeholder.com/500",
+      "description": "I'm a description",
+      "price": 20,
+      "user_id": 1,
+      "creationDate": "",
+      "id": 1
+    }
+  ]
+}
