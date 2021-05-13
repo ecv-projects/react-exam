@@ -5,6 +5,7 @@ import {
   retrieveArticles
 } from "../../actions/articles";
 import { Link } from "react-router-dom";
+import ReactPaginate from 'react-paginate';
 
 class ArticlesList extends Component {
   constructor(props) {
@@ -131,6 +132,18 @@ class ArticlesList extends Component {
             </div>
           )}
         </div>
+        <ReactPaginate
+          previousLabel={'previous'}
+          nextLabel={'next'}
+          breakLabel={'...'}
+          breakClassName={'break-me'}
+          pageCount={this.state.pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={this.handlePageClick}
+          containerClassName={'pagination'}
+          activeClassName={'active'}
+        />
       </div>
     );
   }
