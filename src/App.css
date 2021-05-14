@@ -16,6 +16,8 @@
 
 .product-image {
   height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .btn {
@@ -23,7 +25,7 @@
 }
 
 .list-group {
-  flex-direction: row;
+  flex-direction: row !important;
   flex-wrap: wrap;
 }
 
