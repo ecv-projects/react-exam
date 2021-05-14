@@ -30,6 +30,7 @@
 }
 
 .list-group-item  {
+  position: relative;
   width: 33%;
   cursor: pointer;
 }
@@ -50,4 +51,9 @@
 
 .selected-article {
   margin: 0 auto 50px;
+}
+
+.edit-button {
+  position: absolute;
+  bottom: 10px;
 }

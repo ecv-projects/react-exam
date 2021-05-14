@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import ReactPaginate from 'react-paginate';
 import Button from "../../components/Button"
 import Quantity from "../../components/Quantity"
-
+import ArticleCard from "../../components/ArticleCard"
 
 class ArticlesList extends Component {
   constructor(props) {
@@ -21,7 +21,6 @@ class ArticlesList extends Component {
       currentArticle: null,
       currentIndex: -1
     };
-
   }
 
   componentDidMount() {
@@ -94,31 +93,10 @@ class ArticlesList extends Component {
                   onClick={() => this.setActiveArticle(article, index)}
                   key={index}
                 >
-                  <h4>Article</h4>
-                  <div>
-                    <label>
-                      <strong>Name:</strong>
-                    </label>{" "}
-                    {article.name}
-                  </div>
-                  <div className="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
-                  </div>
-                  <div>
-                    <label>
-                      <strong>Description:</strong>
-                    </label>{" "}
-                    {article.description}
-                  </div>
-                  <div>
-                    <label>
-                      <strong>Price:</strong>
-                    </label>{" "}
-                    {article.price} € 
-                  </div>
-
+                  <ArticleCard article={article} />
                     <Link
                       to={"/articles/edit/" + article.id}
-                      className="btn btn-warning"
+                      className="btn btn-warning edit-button"
                     >
                       Edit
                     </Link>

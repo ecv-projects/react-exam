@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { useEffect, useState } from 'react'
 
   class Quantity extends Component {
     constructor(props) {

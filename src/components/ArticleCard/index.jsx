@@ -1,12 +1,9 @@
 import React from "react";
 import PropTypes from 'prop-types'
-import { useHistory } from 'react-router-dom'
 
 const ArticleCard = ({ article }) => {
-  const history = useHistory();
-
   return (
-    <div className="w-1/3 m-6 flex flex-col items-center py-5 h-50 border cursor-pointer" onClick={() => history.push(`/articles/${article.id}`)} >
+    <div className="w-1/3 m-6 flex flex-col items-center py-5 h-50 border cursor-pointer" >
       <h4>{article.name}</h4>
       <div className="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
       </div>
