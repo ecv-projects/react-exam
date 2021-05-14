@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import {
   retrieveArticles
 } from "../../actions/articles";
-import ArticleCard from '../ArticleCard'
+import ArticleCard from '../../components/ArticleCard'
 
 
 class LastThree extends Component {
