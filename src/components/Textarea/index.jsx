@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import React from "react";
+
 
 const Textarea = ({ label, name, id, placeholder, cols, row, required, handleChange, value, error }) => (
   <div className="flex flex-col mt-10">
@@ -28,7 +30,7 @@ Textarea.propTypes = {
 
 Textarea.defaultProps = {
   type: 'text',
-  required: false,
+  required: true,
   placeholder: '',
   error: ''
 }

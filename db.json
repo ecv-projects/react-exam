@@ -40,6 +40,32 @@
       "user_id": 1,
       "creationDate": "",
       "id": 1
+    },
+    {
+      "name": "Chaussures",
+      "image": "https://via.placeholder.com/500",
+      "description": "I'm a description",
+      "price": 20,
+      "user_id": 1,
+      "creationDate": "",
+      "id": 2
+    },
+    {
+      "name": "Chaussures",
+      "image": "https://via.placeholder.com/500",
+      "description": "I'm a description",
+      "price": 20,
+      "user_id": 1,
+      "creationDate": "",
+      "id": 3
+    },    {
+      "name": "Chaussures",
+      "image": "https://via.placeholder.com/500",
+      "description": "I'm a description",
+      "price": 20,
+      "user_id": 1,
+      "creationDate": "",
+      "id": 4
     }
   ]
 }
