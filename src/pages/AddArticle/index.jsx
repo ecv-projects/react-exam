@@ -18,7 +18,7 @@ class AddArticle extends Component {
       image: "",
       description: "",
       price: "",
-      date: "",
+      date: new Date().toLocaleString(),
       published: false,
       submitted: false,
     };

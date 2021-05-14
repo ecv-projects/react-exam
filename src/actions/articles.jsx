@@ -7,9 +7,9 @@ import {
 
 import ArticleDataService from "../services/article.service";
 
-export const createArticle = (name, image, description, price) => async (dispatch) => {
+export const createArticle = (name, image, description, price, date) => async (dispatch) => {
   try {
-    const res = await ArticleDataService.create({ name, image, description, price });
+    const res = await ArticleDataService.create({ name, image, description, price, date });
 
     dispatch({
       type: CREATE_ARTICLE,

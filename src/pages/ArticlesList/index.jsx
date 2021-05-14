@@ -94,6 +94,7 @@ class ArticlesList extends Component {
               </div>
               <div className="product-image" style={{backgroundImage: "url(" + currentArticle.image + ")"}}>
               </div>
+              <div>Date de création : {currentArticle.date}</div>
               <div>
                 <label>
                   <strong>Description:</strong>
