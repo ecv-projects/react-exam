@@ -6,6 +6,9 @@ import {
 } from "../../actions/articles";
 import { Link } from "react-router-dom";
 import ReactPaginate from 'react-paginate';
+import Button from "../../components/Button"
+import Quantity from "../../components/Quantity"
+
 
 class ArticlesList extends Component {
   constructor(props) {
@@ -47,6 +50,39 @@ class ArticlesList extends Component {
       <div>
         <div>
           <h4>Articles List</h4>
+          <p>Select an article to see more...</p>
+          <div className="col-md-6 selected-article">
+          {currentArticle ? (
+            <div>
+              <h4>Article selected</h4>
+              <div>
+                <label>
+                  <strong>Name:</strong>
+                </label>{" "}
+                {currentArticle.name}
+              </div>
+              <div className="product-image" style={{backgroundImage: "url(" + currentArticle.image + ")"}}>
+              </div>
+              <div>
+                <label>
+                  <strong>Description:</strong>
+                </label>{" "}
+                {currentArticle.description}
+              </div>
+              <div>
+                <label>
+                  <strong>Price:</strong>
+                </label>{" "}
+                {currentArticle.price} € 
+              </div>
+              <Quantity />
+              <Button text="Add to cart" />
+            </div>
+          ) : (
+            <div>
+            </div>
+          )}
+        </div>
           <ul className="list-group">
             {articles &&
               articles.map((article, index) => (
@@ -91,46 +127,6 @@ class ArticlesList extends Component {
               </li>
               ))}
           </ul>
-        </div>
-        <div className="col-md-6">
-          {currentArticle ? (
-            <div>
-              <h4>Article</h4>
-              <div>
-                <label>
-                  <strong>Name:</strong>
-                </label>{" "}
-                {currentArticle.name}
-              </div>
-              <div className="product-image" style={{backgroundImage: "url(" + currentArticle.image + ")"}}>
-              </div>
-              <div>
-                <label>
-                  <strong>Description:</strong>
-                </label>{" "}
-                {currentArticle.description}
-              </div>
-              <div>
-                <label>
-                  <strong>Price:</strong>
-                </label>{" "}
-                {currentArticle.price} € 
-              </div>
-              
-              <div>
-              </div>
-
-              <Link
-                to={"/articles/" + currentArticle.id}
-                className="btn btn-warning"
-              >
-                Edit
-              </Link>
-            </div>
-          ) : (
-            <div>
-            </div>
-          )}
         </div>
         <ReactPaginate
           previousLabel={'previous'}
