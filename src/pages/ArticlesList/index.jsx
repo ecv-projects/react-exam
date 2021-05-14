@@ -1,24 +1,32 @@
 
 import React, { Component } from "react";
+import { useHistory } from 'react-router-dom'
 import { connect } from "react-redux";
 import {
-  retrieveArticles
+  retrieveArticles,
+  findArticlesByName,
+  findArticleById
 } from "../../actions/articles";
 import { Link } from "react-router-dom";
 import ReactPaginate from 'react-paginate';
+import ArticleCard from "../ArticleCard"
 
 class ArticlesList extends Component {
   constructor(props) {
     super(props);
     this.refreshData = this.refreshData.bind(this);
     this.setActiveArticle = this.setActiveArticle.bind(this);
+    this.findByName = this.findByName.bind(this);
+    this.findById = this.findById.bind(this);
+
 
     this.state = {
       articles: [],
       currentArticle: null,
-      currentIndex: -1
+      currentIndex: -1,
+      searchName: "",
+      searchId: ""
     };
-
   }
 
   componentDidMount() {
@@ -39,14 +47,56 @@ class ArticlesList extends Component {
     });
   }
 
+  onChangeSearchName(e) {
+    const searchName = e.target.value;
+
+    console.log('searchName',searchName)
+
+    // this.setState({
+    //   searchName: searchName,
+    // });
+  }
+
+  
+  findByName() {
+    this.refreshData();
+
+    this.props.findArticlesByName(this.state.searchName);
+  }
+
+  findById() {
+    this.refreshData();
+
+    this.props.findArticleById(this.state.searchId);
+  }
+
   render() {
-    const { currentArticle, currentIndex } = this.state;
+    const { searchName, searchId, currentArticle, currentIndex } = this.state;
     const { articles } = this.props;
+    //const history = useHistory();
 
     return (
       <div>
         <div>
           <h4>Articles List</h4>
+          <div className="input-group mb-3">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search by name"
+              value={searchName}
+              onChange={this.onChangeSearchName}
+            />
+            <div className="input-group-append">
+              <button
+                className="btn btn-outline-secondary"
+                type="button"
+                onClick={this.findByName}
+              >
+                Search
+              </button>
+            </div>
+          </div>
           <ul className="list-group">
             {articles &&
               articles.map((article, index) => (
@@ -55,39 +105,25 @@ class ArticlesList extends Component {
                     "list-group-item " +
                     (index === currentIndex ? "active" : "")
                   }
-                  onClick={() => this.setActiveArticle(article, index)}
+                  // onClick={() => this.setActiveArticle(article, index)}
+                  // onClick={() =>
+                  //   {
+                  //     history.push(`/articles/${article.id}`);
+                  //     const article = article;
+
+                  //   } 
+                  // }
                   key={index}
                 >
-                  <h4>Article</h4>
-                  <div>
-                    <label>
-                      <strong>Name:</strong>
-                    </label>{" "}
-                    {article.name}
-                  </div>
-                  <div className="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
-                  </div>
-                  <div>
-                    <label>
-                      <strong>Description:</strong>
-                    </label>{" "}
-                    {article.description}
-                  </div>
-                  <div>
-                    <label>
-                      <strong>Price:</strong>
-                    </label>{" "}
-                    {article.price} € 
-                  </div>
-
+                  <ArticleCard article={article} />
+                  <div className="action-edit">
                     <Link
                       to={"/articles/edit/" + article.id}
                       className="btn btn-warning"
                     >
                       Edit
                     </Link>
-                  <div>
-                </div>
+                  </div>
               </li>
               ))}
           </ul>
@@ -156,5 +192,7 @@ const mapStateToProps = (state) => {
   };
   
   export default connect(mapStateToProps, {
-    retrieveArticles
+    retrieveArticles,
+    findArticlesByName,
+    findArticleById
   })(ArticlesList);

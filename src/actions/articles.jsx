@@ -50,6 +50,32 @@ export const updateArticle = (id, data) => async (dispatch) => {
   }
 };
 
+export const findArticlesByName = (name) => async (dispatch) => {
+  try {
+    const res = await ArticleDataService.findByName(name);
+
+    dispatch({
+      type: RETRIEVE_ARTICLES,
+      payload: res.data,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const findArticleById = (id) => async (dispatch) => {
+  try {
+    const res = await ArticleDataService.findById(id);
+
+    dispatch({
+      type: RETRIEVE_ARTICLES,
+      payload: res.data,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const deleteArticle = (id) => async (dispatch) => {
   try {
     await ArticleDataService.delete(id);

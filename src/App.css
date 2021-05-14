@@ -30,6 +30,7 @@
 }
 
 .list-group-item  {
+  position: relative;
   width: 33%;
   cursor: pointer;
 }
@@ -46,4 +47,9 @@
 
 .btn {
   margin: 20px 10px 0 0;
+}
+
+.action-edit {
+  position: absolute;
+  bottom: 10px;
 }

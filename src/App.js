@@ -47,7 +47,7 @@ const App = () => (
       <Route exact path={["/articles"]} component={ArticlesList} />
       <Route exact path="/add" component={AddArticle} />
       <Route path="/articles/edit/:id" component={ArticleEdit} />
-      {/* <Route path="/articles/:id" component={ArticlePreview} /> */}
+      <Route path="/articles/:id" component={ArticlePreview} />
       <Route path="/profile-edit" component={ProfileEdit} />
       <Route path="/" component={Home} />
     </Switch>

@@ -25,6 +25,10 @@ class ArticleDataService {
     return http.delete(`/articles`);
   }
 
+  findById(id) {
+    return http.get(`/articles?id=${id}`);
+  }
+
   findByName(name) {
     return http.get(`/articles?name=${name}`);
   }

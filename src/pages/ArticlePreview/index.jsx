@@ -1,15 +1,13 @@
 import React from "react";
 import PropTypes from 'prop-types'
-import { useEffect, useState } from 'react'
+//import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import {
-  retrieveArticles
-} from "../../actions/articles";
 
-const ArticlePreview = () => {
+const ArticlePreview = (article) => {
   let { id } = useParams();
-  const [article, setArticle] = useState();
+  //const [article, setArticle] = useState();
   console.log('id', id)
+  console.log('article',article)
 
   // retrieveArticles();
 
@@ -18,19 +16,19 @@ const ArticlePreview = () => {
   //   setArticle(currentArticle);
   // }, [id])
 
-//   return (
-// //     <div className="w-1/3 m-6 flex flex-col items-center py-5 h-50 border cursor-pointer">
-// //       <h4>{article.name}</h4>
-// //       <div className="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
-// //       </div>
-// //       <div>
-// //         <label>
-// //           <strong>Price:</strong>
-// //         </label>{" "}
-// //         {article.price} € 
-// //       </div>
-// //     </div>
-//   )
+  return (
+    <div className="w-1/3 m-6 flex flex-col items-center py-5 h-50 border cursor-pointer">
+      <h4>{article.name}</h4>
+      <div className="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
+      </div>
+      <div>
+        <label>
+          <strong>Price:</strong>
+        </label>{" "}
+        {article.price} € 
+      </div>
+    </div>
+  )
 }
 
 ArticlePreview.propTypes = {
