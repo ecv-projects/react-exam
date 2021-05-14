@@ -40,6 +40,13 @@
       "user_id": 1,
       "creationDate": "",
       "id": 1
+    },
+    {
+      "name": "test",
+      "image": "https://qastack.fr/static/img/logo.png",
+      "description": "description",
+      "price": "30",
+      "id": 2
     }
   ]
 }
