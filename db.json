@@ -29,6 +29,16 @@
       "image": "https://via.placeholder.com/250",
       "role": "admin",
       "id": 3
+    },
+    {
+      "email": "julie@gmail.com",
+      "password": "$2a$10$Z.zHw7FWiCrNpYUm2UZDvenGLDvf7hXP3oeDVoF192sdFgOP3iK2W",
+      "firstname": "Julie",
+      "lastname": "Dubois",
+      "age": "45",
+      "image": "https://via.placeholder.com/250",
+      "role": "admin",
+      "id": 4
     }
   ],
   "articles": [
@@ -39,7 +49,53 @@
       "price": 20,
       "user_id": 1,
       "creationDate": "",
-      "id": 1
+      "id": 2
+    },
+    {
+      "name": "Chaussures",
+      "image": "https://via.placeholder.com/500",
+      "description": "I'm a description",
+      "price": "2000",
+      "user_id": 1,
+      "creationDate": "",
+      "id": 3
+    },
+    {
+      "name": "Chaussures",
+      "image": "https://via.placeholder.com/500",
+      "description": "I'm a description",
+      "price": 20,
+      "user_id": 1,
+      "creationDate": "",
+      "id": 4
+    },
+    {
+      "name": "test",
+      "image": "https://www.modzik.com/wp-content/uploads/2016/07/legramme-cover-benoitlinero-benoit-linero-modzik-cover.jpg",
+      "description": "test",
+      "price": "test",
+      "id": 6
+    },
+    {
+      "name": "nameeeeeee",
+      "image": "https://www.modzik.com/wp-content/uploads/2016/07/legramme-cover-benoitlinero-benoit-linero-modzik-cover.jpg",
+      "description": "test",
+      "price": "test",
+      "id": 7
+    },
+    {
+      "name": "nameeeeeee",
+      "image": "https://www.modzik.com/wp-content/uploads/2016/07/legramme-cover-benoitlinero-benoit-linero-modzik-cover.jpg",
+      "description": "lorem",
+      "price": "25",
+      "id": 8
+    },
+    {
+      "name": "xszs",
+      "image": "xzsx",
+      "description": "xzsx",
+      "price": "xzsx",
+      "id": 9
     }
   ]
 }
