@@ -18,8 +18,9 @@ class AddArticle extends Component {
       image: "",
       description: "",
       price: "",
+      date: "",
       published: false,
-      submitted: false
+      submitted: false,
     };
   }
 
@@ -48,10 +49,10 @@ class AddArticle extends Component {
   }
 
   saveArticle() {
-    const { name, image, description, price } = this.state;
+    const { name, image, description, price, date } = this.state;
 
     this.props
-      .createArticle(name, image, description, price)
+      .createArticle(name, image, description, price, date)
       .then((data) => {
         this.setState({
           id: data.id,
@@ -60,6 +61,7 @@ class AddArticle extends Component {
           description: data.description,
           price: data.price,
           published: data.published,
+          date: data.date,
           submitted: true
         });
         console.log(data);
@@ -77,7 +79,8 @@ class AddArticle extends Component {
       description: "",
       price: "",
       published: false,
-      submitted: false
+      submitted: false,
+      date: new Date().toLocaleString()
     });
   }
 
@@ -144,7 +147,7 @@ class AddArticle extends Component {
                 name="price"
               />
             </div>
-
+            {this.state.date}
             <button onClick={this.saveArticle} className="btn btn-success">
               Submit
             </button>

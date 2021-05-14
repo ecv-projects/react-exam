@@ -57,6 +57,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7yoUKoLATcKu4BQbnvLY1oYYGuZBumEq0Pw&usqp=CAU",
       "description": "argent",
       "price": "410",
+      "date": "",
       "id": 1
     },
     {
@@ -64,6 +65,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpiFm4AqWMhUTeoyl0ZUCiQ-KG_SX87esYMA&usqp=CAU",
       "description": "argent",
       "price": "300",
+      "date": "",
       "id": 2
     },
     {
@@ -71,6 +73,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk33bkCfzoxCJ2GDMXJvRKitZ9C0-a-XcptA&usqp=CAU",
       "description": "rouge",
       "price": "100",
+      "date": "",
       "id": 3
     },
     {
@@ -78,6 +81,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJGTlSp6uImsn-e3qvCeRhmQhS7SZiGKbepQ&usqp=CAU",
       "description": "noir",
       "price": "200",
+      "date": "",
       "id": 4
     },
     {
@@ -85,7 +89,29 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxyCmKgiVyxL4VQvqfShg-XPhCQsceT-AGBQ&usqp=CAU",
       "description": "or",
       "price": "350",
+      "date": "",
       "id": 5
+    },
+    {
+      "name": "bracelet",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxyCmKgiVyxL4VQvqfShg-XPhCQsceT-AGBQ&usqp=CAU",
+      "description": "or",
+      "price": "550",
+      "id": 6
+    },
+    {
+      "name": "Test",
+      "image": "#",
+      "description": "Test",
+      "price": "Test",
+      "id": 7
+    },
+    {
+      "name": "Test",
+      "image": "#",
+      "description": "test",
+      "price": "test",
+      "id": 8
     }
   ]
 }
