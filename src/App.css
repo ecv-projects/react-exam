@@ -29,6 +29,7 @@
 
 .list-group-item  {
   width: 33%;
+  cursor: pointer;
 }
 
 #react-paginate ul {
@@ -39,4 +40,8 @@
 
 #react-paginate li {
   display: inline-block;
+}
+
+.btn {
+  margin: 20px 10px 0 0;
 }

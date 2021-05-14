@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { updateArticle, deleteArticle } from "../../actions/articles";
 import ArticleDataService from "../../services/article.service";
 
-class Article extends Component {
+class ArticleEdit extends Component {
   constructor(props) {
     super(props);
     this.onChangeName = this.onChangeName.bind(this);
@@ -125,7 +125,7 @@ class Article extends Component {
       <div>
         {currentArticle ? (
           <div className="edit-form">
-            <h4>Article</h4>
+            <h4>Edit Article</h4>
             <form>
               <div className="form-group">
                 <label htmlFor="name">name</label>
@@ -194,4 +194,4 @@ class Article extends Component {
   }
 }
 
-export default connect(null, { updateArticle, deleteArticle })(Article);
+export default connect(null, { updateArticle, deleteArticle })(ArticleEdit);

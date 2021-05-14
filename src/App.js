@@ -13,7 +13,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import AddArticle from "./pages/AddArticle";
-import Article from "./pages/Article";
+import ArticleEdit from "./pages/ArticleEdit";
+import ArticlePreview from "./pages/ArticlePreview";
 import ArticlesList from "./pages/ArticlesList";
 import ProfileEdit from "./pages/ProfileEdit";
 
@@ -45,7 +46,8 @@ const App = () => (
       <Route exact path={["/"]} component={Home} />
       <Route exact path={["/articles"]} component={ArticlesList} />
       <Route exact path="/add" component={AddArticle} />
-      <Route path="/articles/:id" component={Article} />
+      <Route path="/articles/edit/:id" component={ArticleEdit} />
+      {/* <Route path="/articles/:id" component={ArticlePreview} /> */}
       <Route path="/profile-edit" component={ProfileEdit} />
       <Route path="/" component={Home} />
     </Switch>

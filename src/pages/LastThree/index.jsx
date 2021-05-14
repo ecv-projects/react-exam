@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import {
   retrieveArticles
 } from "../../actions/articles";
+import ArticleCard from '../ArticleCard'
+
 
 class LastThree extends Component {
   constructor(props) {
@@ -26,31 +28,13 @@ class LastThree extends Component {
     return (
       <div>
         <div>
-          <h4>3 derniers articles</h4>
-
+          <h4>Last 3 articles ...</h4>
           <ul className="list-group">
             {lastThree &&
               lastThree.map((article, index) => (
-                <li
-                  className={
-                    "list-group-item "
-                  }
-                  key={index}
-                >
-                  <h4>{article.name}</h4>
-                  <div className="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
-                  </div>
-                  <div>
-                  </div>
-                  <div>
-                    <label>
-                      <strong>Price:</strong>
-                    </label>{" "}
-                    {article.price} € 
-                  </div>
-                  <div>
-                </div>
-              </li>
+                <li className="list-group-item " key={index}>
+                  <ArticleCard  article={article} />
+                </li>
               ))}
           </ul>
         </div>

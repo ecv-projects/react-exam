@@ -81,7 +81,7 @@ class ArticlesList extends Component {
                   </div>
 
                     <Link
-                      to={"/articles/" + article.id}
+                      to={"/articles/edit/" + article.id}
                       className="btn btn-warning"
                     >
                       Edit
