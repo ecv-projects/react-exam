@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 
 const ArticleCard = ({ article }) => {
   return (
-    <div className="w-1/3 m-6 flex flex-col items-center py-5 h-50 border cursor-pointer" >
+    <div className="cursor-pointer" >
       <h4>{article.name}</h4>
+      <p>{article.description}</p>
       <div className="product-image" style={{backgroundImage: "url(" + article.image + ")"}}>
       </div>
       <div>

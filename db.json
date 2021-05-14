@@ -39,63 +39,53 @@
       "image": "https://via.placeholder.com/250",
       "role": "admin",
       "id": 4
+    },
+    {
+      "firstname": "Léa",
+      "lastname": "Dubois",
+      "age": "19",
+      "image": "https://via.placeholder.com/250",
+      "role": "admin",
+      "password": "$2a$10$J0.MUThWBI8t9E760c6GUOKG8ydRhxYOCz1o4RfJqqwr2R0s/C63e",
+      "email": "juliee@gmail.com",
+      "id": 5
     }
   ],
   "articles": [
     {
-      "name": "Chaussures",
-      "image": "https://via.placeholder.com/500",
-      "description": "I'm a description",
-      "price": 20,
-      "user_id": 1,
-      "creationDate": "",
+      "name": "bracelet câble le 5g",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7yoUKoLATcKu4BQbnvLY1oYYGuZBumEq0Pw&usqp=CAU",
+      "description": "argent",
+      "price": "410",
+      "id": 1
+    },
+    {
+      "name": "bague",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpiFm4AqWMhUTeoyl0ZUCiQ-KG_SX87esYMA&usqp=CAU",
+      "description": "argent",
+      "price": "300",
       "id": 2
     },
     {
-      "name": "Chaussures",
-      "image": "https://via.placeholder.com/500",
-      "description": "I'm a description",
-      "price": "2000",
-      "user_id": 1,
-      "creationDate": "",
+      "name": "bracelet",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk33bkCfzoxCJ2GDMXJvRKitZ9C0-a-XcptA&usqp=CAU",
+      "description": "rouge",
+      "price": "100",
       "id": 3
     },
     {
-      "name": "Chaussures",
-      "image": "https://via.placeholder.com/500",
-      "description": "I'm a description",
-      "price": 20,
-      "user_id": 1,
-      "creationDate": "",
+      "name": "bracelet",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJGTlSp6uImsn-e3qvCeRhmQhS7SZiGKbepQ&usqp=CAU",
+      "description": "noir",
+      "price": "200",
       "id": 4
     },
     {
-      "name": "test",
-      "image": "https://www.modzik.com/wp-content/uploads/2016/07/legramme-cover-benoitlinero-benoit-linero-modzik-cover.jpg",
-      "description": "test",
-      "price": "test",
-      "id": 6
-    },
-    {
-      "name": "nameeeeeee",
-      "image": "https://www.modzik.com/wp-content/uploads/2016/07/legramme-cover-benoitlinero-benoit-linero-modzik-cover.jpg",
-      "description": "test",
-      "price": "test",
-      "id": 7
-    },
-    {
-      "name": "nameeeeeee",
-      "image": "https://www.modzik.com/wp-content/uploads/2016/07/legramme-cover-benoitlinero-benoit-linero-modzik-cover.jpg",
-      "description": "lorem",
-      "price": "25",
-      "id": 8
-    },
-    {
-      "name": "xszs",
-      "image": "xzsx",
-      "description": "xzsx",
-      "price": "xzsx",
-      "id": 9
+      "name": "bracelet",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxyCmKgiVyxL4VQvqfShg-XPhCQsceT-AGBQ&usqp=CAU",
+      "description": "or",
+      "price": "350",
+      "id": 5
     }
   ]
 }

@@ -18,6 +18,7 @@
   height: 200px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .btn {
@@ -33,6 +34,7 @@
   position: relative;
   width: 33%;
   cursor: pointer;
+  text-align: center;
 }
 
 #react-paginate ul {
@@ -56,4 +58,18 @@
 .edit-button {
   position: absolute;
   bottom: 10px;
+  left: 10px;
+}
+
+.list-group-item+.list-group-item {
+  border: 1px !important;
+}
+
+footer {
+  position: static !important;
+  bottom: auto !important;
+}
+
+.container-home, .container.profile, .submit-form, .edit-form {
+  height: calc(100vh - 150px);
 }

@@ -27,7 +27,7 @@ class LastThree extends Component {
 
     return (
       <div>
-        <div>
+        <div className="container-home">
           <h4>Last 3 articles ...</h4>
           <ul className="list-group">
             {lastThree &&
